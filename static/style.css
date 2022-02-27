@@ -1,0 +1,60 @@
+/* COLOR PALLETE https://coolors.co/ffa025-fffcf2-403d39-252422 */
+
+body {
+    background-color:#252422;
+    color: #FFA025;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #FFA025;        /* color of the tracking area */
+  }
+  
+
+
+.text-right {
+    text-align: right;
+}
+
+a:link {
+    color: #FFA025;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:visited {
+    color: #FFA025;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFFCF2;
+    text-decoration: none;
+}
+
+a:active {
+    color: #FFA025;
+    text-decoration: none;
+}
+
+.chord {
+    font-family: 'Lora', serif;
+    font-size: 150px;
+}
+
+select {
+    background-color: #FFA025;
+    color:#252422;
+    width: 100px;
+}
+
+input {
+    border-radius: 0;
+    background-color: #403D39;
+    color: #FFFCF2;
+    width: 100px;
+    
+}
