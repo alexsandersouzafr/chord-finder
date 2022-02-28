@@ -14,7 +14,7 @@ print(choices)
 @app.route("/")
 def index():
 
-    return render_template("/layout.html", choices=choices)
+    return render_template("/index.html", choices=choices)
 
 @app.route("/found")
 def found():

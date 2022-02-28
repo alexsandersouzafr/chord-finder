@@ -130,7 +130,7 @@ def pattern(notes):
         if leap < 0:
             leap *= -1
         pattern.append(leap)
-    # print(f"Pattern: {pattern}") #DEBUG PRINT
+    print(f"Pattern: {pattern}") #DEBUG PRINT
     return pattern
 
 # Define chord color and root
@@ -167,7 +167,7 @@ def print_chord(prename):
             root += prename[1]
         bass = f"/{root}"
         # print(root)
-        # print(f"Prename: {prename}")
+        print(f"Prename: {prename}")
         # Check if chord is major or minor and set the correction value so you get new root
         if 'B3' in prename: # for 3rd in bass
             if 'Minor' in prename:
@@ -199,20 +199,23 @@ def print_chord(prename):
                 if root < 0:
                     root += 12                
                 
-        # print(root)
-        # print(f"Correction: {correction}")
-        # print(f"bass: {bass}")
+        print(root)
+        print(f"Correction: {correction}")
+        print(f"bass: {bass}")
 
         # Get new root
         root = str(root)
         for note in NOTES:
             if root in note:
                 if 'b' in bass:
-                    root = NOTES[note][1]
+                    if NOTES[note][1]:
+                        root = NOTES[note][1]
+                    else:
+                        root = NOTES[note][0]
                 elif '#' in bass:
                     root = NOTES[note][0]
                 else:
-                    root = NOTES[note][1]
+                    root = NOTES[note][0]
 
     final_name = f"{root}{color}{bass}"
     return final_name
@@ -237,4 +240,4 @@ def chordfinder(root,b,c,d):
     return print_chord(f"{root}{chord_color}")
     
     
-# chordfinder(input("Root: "), input(), input(), input())
+# print(chordfinder(input("Root: "), input(), input(), input()))
