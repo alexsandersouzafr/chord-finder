@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@600;700&family=Tillana:wght@400;600&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+html, body{
+    height: 100%;
+    margin: 0px;
+  }
+
+code{
+    color: #ff8a00;
+}
+.profile{
+    height: 250px;
+    width: 250px;
+    border-radius:20px;
+    filter:grayscale(100%);
+}
+
+.blue {
+    background: url("cardboard-texture.jpg"), url("lines.jpg") repeat;
+    background-color: #226cdc;
+    background-blend-mode:multiply;
+    background-size: cover;
+    animation: backcolors 15s infinite, backroll 100s;
+}
+
+@keyframes backcolors {
+    0% { background-color: #226cdc;}
+    25% { background-color: #00e05e;}
+    50% { background-color: #e54f6d;}
+    75% { background-color: #ff8a00;}
+    100% { background-color: #226cdc;}
+}
+
+@keyframes textcolor {
+    
+    0% { color: antiquewhite}
+    33% { color: #ff8a00;}
+    66% { color: antiquewhite}
+}
+
+
+@keyframes backroll {
+    0% {background-position: 0% 0%;}
+    100% {background-position: 100% 100%;}
+}
+
+.animacolor {
+    animation: textcolor 30s infinite;
+}
+
+.box{
+    height: 100vh;
+    background-blend-mode:hard-light;
+    box-shadow: black;
+}
+
+.name {
+    font-family: 'Expletus Sans', cursive;
+    font-weight: 700;
+    color:rgb(27, 27, 27);
+    font-size: 7rem;
+    line-height: 0.5;
+    padding-top: 250px;
+}
+
+.title{
+    font-family: 'Inspiration', cursive;
+    font-size: 5rem;
+    color: rgb(27, 27, 27);
+    letter-spacing: 5px;   
+}
+
+.arrow {
+    font-family: 'Expletus Sans', cursive;
+    color:rgb(27, 27, 27);
+    font-size: 3vh;
+    letter-spacing: 8px;
+    bottom: 0;
+}
+
+.sp{
+    padding-inline: 30vh;
+}
+.aboutme {
+    font-family: 'Expletus Sans', cursive;
+    font-size: xx-large;
+}
+
+.about {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+
+.dark {
+    padding-top: 300px;
+    background:#226cdc ;
+    color: antiquewhite;
+    font-family: Tahoma, sans-serif;
+}
+
+.grey {
+    filter:grayscale(100%);
+}
+
+.skill{
+    padding: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: antiquewhite;
+}
+
+@media only screen and (max-width: 600px) {
+    .blue {padding: 0%;}
+    .name {padding-top: 50px; font-size: 400%; line-height: 1;}
+    .title {font-size:4rem; line-height: 1; padding-top: 50px; letter-spacing: 0    ;}
+    .arrow {padding-top: 50px;}
+    .sp {padding-inline: 1vh;}
+    }
+
+@media only screen and (min-width: 600px) and (max-width: 820px) {
+    .blue {padding: 0%;}
+    .name {padding-top: 200px; font-size: 600%; line-height: 1;}
+    .title {font-size:4rem; line-height: 1; padding-top: 150px; letter-spacing: 0;}
+    .arrow {padding-top: 200px;}
+    .sp {padding-inline: 1vh;}
+    .profile {
+        width: 180px;
+        height: 180px;
+    }
+    }
